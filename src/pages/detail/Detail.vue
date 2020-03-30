@@ -1,32 +1,33 @@
 <template>
   <div>
-    <detail-banner :sightName="sightName" :galleryImgs = "galleryImgs" :bannerImg="bannerImg"/>
+    <detail-banner :sightName="sightName" :galleryImgs="galleryImgs" :bannerImg="bannerImg"/>
     <detail-header/>
     <div class="content">
       <Grade/>
       <Location/>
-      <detail-list />
+      <Alert/>
+      <detail-list/>
     </div>
 
   </div>
 </template>
 
 <script>
+  import Alert from '@/common/alert/Alert';
   import DetailBanner from './components/Banner';
   import DetailHeader from './components/Header';
   import DetailList from './components/List';
   import Grade from './components/Grade'
   import Location from './components/Location'
   import Axios from 'axios';
-
   export default {
     name: 'Detail',
-    components: {DetailHeader, DetailBanner, DetailList,Grade,Location},
+    components: {Alert, DetailHeader, DetailBanner, DetailList, Grade, Location},
     data() {
       return {
         sightName: '',
         bannerImg: '',
-        galleryImgs:[]
+        galleryImgs: []
       };
     },
     mounted() {
@@ -51,6 +52,4 @@
 </script>
 
 <style scoped lang="stylus">
-  .content
-    height: 50rem
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <city-header></city-header>
-    <city-search :city="city"></city-search>
-    <city-list :city="city" :hot="hotCity" :letter="letter"></city-list>
-    <city-alphabet :city="city" @change="handleLetterChange"></city-alphabet>
+    <city-header/>
+    <city-search :city="city"/>
+    <city-list :city="city" :hot="hotCity" :letter="letter"/>
+    <city-alphabet :city="city" @change="handleLetterChange"/>
   </div>
 </template>
 

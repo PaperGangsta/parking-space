@@ -78,6 +78,10 @@
         border-radius: .2rem
         background: rgba(0, 0, 0, 0.8)
         font-size: .24rem
+        justify-content: space-around
+
+        span
+          display: inline-block
 
         .banner-icon
           font-size: .24rem
